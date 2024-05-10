@@ -1,0 +1,28 @@
+.footer {
+    padding-top: 130px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    margin: 20px;
+}
+
+.LogoFooter {
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.footer img {
+    width: 30%;
+}
+
+.LogoFooter {
+    width: 50%;
+}
+
+.iconosRedirect {
+    padding-bottom: 50px;
+}

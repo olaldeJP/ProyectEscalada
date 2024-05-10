@@ -1,0 +1,14 @@
+.footer {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer a {
+    margin: 20px;
+}
+
+.LogoFooter {
+    width: 50%;
+}

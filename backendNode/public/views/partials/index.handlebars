@@ -1,0 +1,49 @@
+
+
+{{#if (eq usuario.email 'test@test.com') }}
+   <section class="d-flex" id="sectionMostrarActividad">
+    <button class="submitButton aL4" id="mostrarActividades">Mostrar Actividades</button>
+    <div id="containerMostrarActividades" class=" d-flex"></div>
+</section>
+    <section class="sectionForm d-flex ">
+        <div>
+            <h2>Crear Actividad</h2>
+        </div>
+        <div>
+                <form  id="formActividades" class="d-flex formClass">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name ="nombre" placeholder="Nombre De La Actividad">
+                    <label for="descripcion">Descripcion:</label>
+                    <textarea name="descripcion" placeholder="Descripcion de la Actividad" id="descripciontext" name="story" rows="10" cols="50"></textarea>
+                    <label for="imagen">Fondo De la activudad:</label>
+                    <input type="file"name="imagen">
+                    <button id="butonActividad" class="submitButton aL3">ENVIAR: </button>
+                </form>
+        </div>  
+    </section>
+    {{else}}
+ 
+<section class="sectionForm d-flex ">
+    <div>
+        <h2>Mantente al dia sobre las novedades que tenemos para ofrecerte! </h2>
+    </div>
+    <div>
+        <h3>Contactanos:</h3>
+    </div>
+    <div>
+        <form id="formConsulta" class="d-flex formClass">
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name ="telefono" placeholder="Telefono">
+        <label for="Mensaje">Mensaje:</label>
+        <textarea name="mensaje" placeholder="Escriba el mensaje" id="descripciontext" name="mensaje" rows="10" cols="50"></textarea>
+                 
+        <button onclick="enviarConsulta(event)" class="submitButton aL1">
+          Enviar
+        </button>
+      </form>
+    </div>
+</section>
+
+{{/if}}
+<script src="../../javascripts/indexScrips.js"></script>
+

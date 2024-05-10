@@ -1,0 +1,32 @@
+.miDiv {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1200px;
+  /* O el alto que prefieras */
+  display: flex;
+  justify-content: center;
+
+}
+
+.contenedorActividades {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.contenidoActividades {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenidoActividades h1 {
+  font-size: 110px;
+  color: rgba(0, 0, 0, 0.856);
+  text-shadow: 2px 2px 5px rgba(77, 64, 28, 0.815);
+}
+
+.contenidoActividades p {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.932);
+}
