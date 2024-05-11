@@ -48,6 +48,17 @@ export async function crearUsuario(req, res, next) {
     next(error);
   }
 }
+export async function chequearUsuario(req, res, next) {
+  try {
+    const existe = await usuarioModel.buscarUserSinPass(req.body.email);
+    if (!existe) {
+      return next();
+    }
+    throw new Error("Email Ya usado");
+  } catch (err) {
+    next(err);
+  }
+}
 export async function enviarMailUsuarioCreado(req, res, next) {
   try {
     await emailService.sendWelcome(req.body);

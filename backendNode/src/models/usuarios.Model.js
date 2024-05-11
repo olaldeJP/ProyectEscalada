@@ -32,6 +32,16 @@ class usuarioModelClass {
       });
   }
 
+  async buscarUserSinPass(email) {
+    const usuario = await this.#dataBase
+      .query("select * from usuarios where email=?", [email])
+      .then(function (resultado) {
+        return resultado[0];
+      });
+    if (usuario) {
+      return await this._toPojo(usuario);
+    } else return undefined;
+  }
   async buscarUser(email, password) {
     const usuario = await this.#dataBase
       .query("select * from usuarios where email=? and password =?", [

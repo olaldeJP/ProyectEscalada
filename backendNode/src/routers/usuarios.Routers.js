@@ -6,6 +6,7 @@ import {
   cambiarNombreUser,
   enviarConsulta,
   enviarMailUsuarioCreado,
+  chequearUsuario,
   enviarMailUsuarioBorrado,
 } from "../middlewares/usuarios.Middleware.js";
 import { logout } from "../middlewares/sesion.Middleware.js";
@@ -13,7 +14,12 @@ import { checkUsuarioConectado } from "../middlewares/authorizathion.Middleware.
 export const usuariosRouter = new Router();
 
 usuariosRouter.get("/getUsers", mostrarUsuarios);
-usuariosRouter.post("/", crearUsuario, enviarMailUsuarioCreado);
+usuariosRouter.post(
+  "/",
+  chequearUsuario,
+  crearUsuario,
+  enviarMailUsuarioCreado
+);
 usuariosRouter.put("/", checkUsuarioConectado, cambiarNombreUser);
 usuariosRouter.delete(
   "/",
