@@ -1,6 +1,5 @@
 import "../../style/components/layout/loginNav.css";
 import "../../style/components/layout/Nav.css";
-import React, { useState } from "react";
 
 const LoginVar = (props) => {
   return (

@@ -7,7 +7,6 @@ import Carrusel from "./components/layout/Carrusel";
 import LoginVar from "./components/layout/logginVar";
 import Actividades from "./components/layout/Actividades";
 
-import React, { useState } from "react";
 function App() {
   return (
     <div className="App">
